@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetUserData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strXMLUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserDataResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strXMLUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetExtendedUserDataWithToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strXMLExtendedUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetExtendedUserDataWithTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetExtendedUserDataWithTokenResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetExtendedUserData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lUserID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="lFVID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strXMLExtendedUserData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetExtendedUserDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetExtendedUserDataResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertInternetUserP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDateOfBirth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEMail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPrefix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStreet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStreetNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStreetExtension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZipCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nLevelID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lUserID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertInternetUserPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertInternetUserPResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lUserID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertInternetUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="oInternetUserData" type="tns:InternetUserData" />
+            <s:element minOccurs="1" maxOccurs="1" name="lUserID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InternetUserData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="strLoginName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strDateOfBirth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strEMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPhoneNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fPhoneSmsCapable" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="strFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strLanguage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strPrefix" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strStreet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strStreetNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strStreetExtension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strQuestionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="strAnswer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nLevelID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="nWebTypeID" type="s:unsignedByte" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertInternetUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertInternetUserResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lUserID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserData" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetExtendedUserDataWithTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:SetExtendedUserDataWithToken" />
+  </wsdl:message>
+  <wsdl:message name="SetExtendedUserDataWithTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:SetExtendedUserDataWithTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetExtendedUserDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetExtendedUserData" />
+  </wsdl:message>
+  <wsdl:message name="SetExtendedUserDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetExtendedUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertInternetUserPSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertInternetUserP" />
+  </wsdl:message>
+  <wsdl:message name="InsertInternetUserPSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertInternetUserPResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertInternetUserSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertInternetUser" />
+  </wsdl:message>
+  <wsdl:message name="InsertInternetUserSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertInternetUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserDataExtendedWebSoap">
+    <wsdl:operation name="GetUserData">
+      <wsdl:input message="tns:GetUserDataSoapIn" />
+      <wsdl:output message="tns:GetUserDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetExtendedUserDataWithToken">
+      <wsdl:input message="tns:SetExtendedUserDataWithTokenSoapIn" />
+      <wsdl:output message="tns:SetExtendedUserDataWithTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetExtendedUserData">
+      <wsdl:input message="tns:SetExtendedUserDataSoapIn" />
+      <wsdl:output message="tns:SetExtendedUserDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInternetUserP">
+      <wsdl:input message="tns:InsertInternetUserPSoapIn" />
+      <wsdl:output message="tns:InsertInternetUserPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInternetUser">
+      <wsdl:input message="tns:InsertInternetUserSoapIn" />
+      <wsdl:output message="tns:InsertInternetUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserDataExtendedWebSoap" type="tns:UserDataExtendedWebSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExtendedUserDataWithToken">
+      <soap:operation soapAction="http://tempuri.org/SetExtendedUserDataWithToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExtendedUserData">
+      <soap:operation soapAction="http://tempuri.org/SetExtendedUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInternetUserP">
+      <soap:operation soapAction="http://tempuri.org/InsertInternetUserP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInternetUser">
+      <soap:operation soapAction="http://tempuri.org/InsertInternetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserDataExtendedWebSoap12" type="tns:UserDataExtendedWebSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserData">
+      <soap12:operation soapAction="http://tempuri.org/GetUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExtendedUserDataWithToken">
+      <soap12:operation soapAction="http://tempuri.org/SetExtendedUserDataWithToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetExtendedUserData">
+      <soap12:operation soapAction="http://tempuri.org/SetExtendedUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInternetUserP">
+      <soap12:operation soapAction="http://tempuri.org/InsertInternetUserP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInternetUser">
+      <soap12:operation soapAction="http://tempuri.org/InsertInternetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserDataExtendedWeb">
+    <wsdl:port name="UserDataExtendedWebSoap" binding="tns:UserDataExtendedWebSoap">
+      <soap:address location="https://skbtest.verwalt-berlin.de/HHGWUserData/HHGWUserData.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserDataExtendedWebSoap12" binding="tns:UserDataExtendedWebSoap12">
+      <soap12:address location="https://skbtest.verwalt-berlin.de/HHGWUserData/HHGWUserData.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

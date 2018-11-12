@@ -1,0 +1,31 @@
+<USERDATA>
+	<HHGW 
+		USERID="136" 
+		MODEID="1" 
+		USERMODE="Bürger"
+		LOGINNAME="A.Metzner@schuetze-consulting.ag" 
+		TITLE="Dr." 
+		PREFIX="Herr"
+		FIRSTNAME="Alexander" 
+		LASTNAME="Metzner" 
+		EMAIL="A.Metzner@schuetze-consulting.ag"
+		LANGUAGE="de-DE"
+		LEVELID="1" 
+		STREET="Mopsweg" 
+		STREETNUMBER="5"
+		STREETEXTENSION="1337" 
+		CITY="Berlin" 
+		ZIPCODE="10317" 
+		COUNTRY="Deutschland"
+		DATEOFBIRTH="19700101" 
+		CERTIFICATEID="147963" 
+		USERPHONENUMBER="0190666666" />
+	<ROLES 
+		ROLEID="988" 
+		ROLENAME="Default-Rolle" 
+		PERMISSION="1"
+		ISDEFAULT="1" />
+	<AUTHENTICATION 
+		AuthenticationModeID="1"
+		InvalidAt="2017-06-12T10:27:02.000" />
+</USERDATA>

@@ -1,0 +1,56 @@
+<USERDATA>
+	<HHGW 
+		USERID="150" 
+		MODEID="3" 
+		USERMODE="Firmenkunde"
+		LOGINNAME="skbref-nutzer1@schuetze-consulting.ag" 
+		TITLE="Dr." 
+		PREFIX="Herr"
+		FIRSTNAME="Theodor der Erste" 
+		LASTNAME="Testnutzer"
+		EMAIL="skbref-nutzer1@schuetze-consulting.ag" 
+		LANGUAGE="de-DE"
+		MASTERUSER="0" 
+		USERORGANISATION="Orga-Truppe 1" 
+		PHONENUMBER="+49 30 318050900"
+		FAX="+49 30 318050901" 
+		USERSTREET="Knesebeckstr." 
+		USERSTREETNUMBER="1" 
+		USERCITY="Berlin"
+		USERZIPCODE="10623" 
+		USERCOUNTRY="Deutschland" 
+		COMPANYID="24"
+		COMPANYNAME="Schütze Consulting AG" 
+		COMPANYORGANISATION="IT"
+		REGNUMBER="1337" 
+		COMPANYSTREET="Berliner Str." 
+		COMPANYSTREETNUMBER="2"
+		COMPANYCITY="Dresden" 
+		COMPANYZIPCODE="10627" 
+		COMPANYCOUNTRY="England"
+		MAILBOX="mad mail" 
+		BOXZIPCODE="11234" 
+		BILLSTREET="Bill Murray Straße" 
+		BILLSTREETNUMBER="666" 
+		BILLCITY="Billington"
+		BILLZIPCODE="56455" 
+		BILLCOUNTRY="Billonesien" 
+		BILLBOX="B The Box"
+		BILLBOXZIPCODE="14789"
+		CERTIFICATEID="12369" 
+		USERPHONENUMBER="+49 30 123 456 789 0"
+		COMPANYSUBORGANISATION="Entwicklung" />
+	<ROLES 
+		ROLEID="1025" 
+		ROLENAME="Default-Rolle" 
+		PERMISSION="1"
+		ISDEFAULT="1" />
+	<ROLES 
+		ROLEID="1026" 
+		ROLENAME="Personalplanungsberichte"
+		PERMISSION="1" 
+		ISDEFAULT="0" />
+	<AUTHENTICATION 
+		AuthenticationModeID="1"
+		InvalidAt="2016-05-12T13:17:25.000" />
+</USERDATA>

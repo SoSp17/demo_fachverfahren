@@ -1,0 +1,15 @@
+servicekonto:
+  base-url: https://docker-host1:9081
+  fachverfahren: 14
+  key-store-path: target/test-classes/keystore-service-konto-mock.p12"
+  trust-store-path: target/test-classes/cacerts.jks
+  nachrichten:
+    local-part: GovGWAsyncResponse
+    path: /GovGWAsyncResponse/GovGWAsyncResponse.wsdl
+    target-namespace-uri: http://tempuri.org
+  nutzerdaten:
+    local-part: UserDataExtendedWeb
+    path: /HHGWUserData/HHGWUserData.wsdl
+    target-namespace-uri: http://tempuri.org
+  login-url: http://docker-host1:7080/app.html
+  keystore-password: password
